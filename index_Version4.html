@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crack the Password — Pink Box</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<!-- Secret is client-side (visible via Inspect). Invite set to the Discord link you provided. -->
+<body data-secret="DEMO42" data-invite="https://discord.gg/XbqVkknD">
+  <main class="center-wrap">
+    <section class="card" role="application" aria-labelledby="title">
+      <h1 id="title">Crack the Password</h1>
+      <p class="lead">Guess the secret password. Bulls = correct char & position. Cows = correct char, wrong position.</p>
+
+      <form id="guessForm" autocomplete="off" class="guess-form">
+        <input id="guess" name="guess" type="text" inputmode="latin" autocomplete="off" maxlength="6" placeholder="Enter your guess" />
+        <button id="submitBtn" type="submit">Guess</button>
+      </form>
+
+      <div id="message" aria-live="polite" class="message"></div>
+
+      <ul id="history" class="history" aria-label="Guess history"></ul>
+
+      <div id="resultArea" class="result-area" hidden>
+        <p>🎉 You cracked it!</p>
+        <a id="inviteLink" class="invite-btn" href="#" target="_blank" rel="noopener">Join the Discord</a>
+      </div>
+
+      <footer class="small">
+        Secret is stored client-side for demo purposes. Open Inspect → Elements to view it.
+      </footer>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

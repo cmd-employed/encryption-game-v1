@@ -1,0 +1,100 @@
+:root{
+  --bg:#fff5f8;
+  --card:#ffffff;
+  --accent:#ff6fa3;
+  --accent-2:#ffbed2;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+  background: linear-gradient(180deg, #fff7fb 0%, #ffeef6 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.center-wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.card{
+  width:100%;
+  max-width:420px;
+  background:var(--card);
+  border-radius:16px;
+  padding:28px;
+  box-shadow: 0 10px 30px rgba(255,110,160,0.12);
+  border: 1px solid rgba(255,110,160,0.12);
+  text-align:center;
+}
+h1{margin:0 0 8px 0; font-size:22px; color:var(--text)}
+.lead{margin:0 0 16px 0; color:var(--muted); font-size:14px}
+.guess-form{
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+  justify-content:center;
+}
+.guess-form input[type="text"]{
+  flex:1;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--accent-2);
+  background: linear-gradient(180deg, #fff 0%, #fffafc 100%);
+  color:var(--text);
+  font-size:15px;
+  outline:none;
+  transition: box-shadow .12s ease;
+}
+.guess-form input[type="text"]:focus{
+  box-shadow:0 6px 20px rgba(255,111,160,0.14);
+  border-color:var(--accent);
+}
+.guess-form button{
+  padding:10px 14px;
+  background: linear-gradient(180deg,var(--accent),#ff4f86);
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition: transform .08s ease;
+}
+.guess-form button:active{ transform: translateY(1px) }
+.message{min-height:22px; color:var(--muted); font-size:14px; margin-bottom:8px}
+.history{
+  list-style:none;
+  padding:0;
+  margin:8px 0;
+  max-height:140px;
+  overflow:auto;
+  text-align:left;
+}
+.history li{
+  display:flex;
+  justify-content:space-between;
+  padding:8px 10px;
+  border-radius:8px;
+  background: linear-gradient(90deg, rgba(255,190,210,0.08), rgba(255,245,250,0.02));
+  margin-bottom:6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size:13px;
+}
+.result-area{ margin-top:10px }
+.invite-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:10px 14px;
+  background: linear-gradient(90deg,var(--accent),#ff4f86);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:700;
+}
+.small{ margin-top:14px; font-size:13px; color:var(--muted) }
